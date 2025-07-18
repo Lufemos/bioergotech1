@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWKKXQ2S7M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GWKKXQ2S7M');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - bioERGOtech Foundation</title>
+    <link rel="icon" href="Images/Logo/short_logo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/Logo/short_logo.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #13d6b0;
+            --primary-dark: #0eb093;
+            --primary-light: #61ffe0;
+            --dark: #333;
+            --darker: #1a1a1a;
+            --light: #fff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #9e9e9e;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .section {
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-title {
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            transition: width .5s ease;
+        }
+        .section-title:hover::after {
+            width: 100%;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, .9);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+            transition: all .3s ease;
+            border: 1px solid #e5e5e5;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .1);
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar py-4" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center cursor-pointer">
+                <img src="Images/Logo/full_bioergotech_nobg.webp" alt="bioERGOtech Logo" class="h-10">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-light-gray" id="home">
+        <div class="container mx-auto px-6 pt-28 pb-12 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-gray-800">
+                About bioERGOtech Foundation
+            </h1>
+            <p class="text-xl max-w-3xl mx-auto text-gray-700">
+                We bridge the critical gap between groundbreaking research and life-saving medical innovations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why We Exist Section -->
+    <section class="section" id="why-we-exist">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="section-title">Why We Exist</h2>
+                    <p class="text-lg mb-6 text-gray-700">
+                        The healthcare industry faces a critical gap: while groundbreaking research happens in laboratories worldwide, too many life-saving innovations never reach the patients who need them. Promising technologies remain trapped in academic settings instead of transforming lives.
+                    </p>
+                    <p class="text-lg text-gray-700 font-semibold">
+                        We believe breakthrough science must become breakthrough medicine.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="Images/placeholders/why-we-exist-placeholder.webp" alt="Lab research" class="rounded-lg shadow-xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="section bg-light-gray" id="how-we-work">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="section-title">How We Work</h2>
+                    <p class="text-lg mb-4 text-gray-700">bioERGOtech operates through a dual model designed to bridge the lab-to-market gap:</p>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-6">
+                        <li><span class="font-bold">AI Development & Spin-off:</span> We partner with healthcare organizations to develop and spin-off AI algorithms that address specific medical needs.</li>
+                        <li><span class="font-bold">Technology Acceleration:</span> We accelerate existing patents and lab technologies to market through strategic partnerships.</li>
+                    </ul>
+                    <p class="text-lg text-gray-700">Our approach is pragmatic, focusing on concrete medical needs to build solutions that work in real clinical settings.</p>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <img src="Images/placeholders/how-we-work-placeholder.webp" alt="Collaboration" class="rounded-lg shadow-xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section" id="values">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center block">Our 6 Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Value 1 -->
+                <div class="card text-center">
+                    <div class="mb-4"><i class="fas fa-heart text-4xl text-primary"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Servant Ambition</h3>
+                    <p class="text-gray-600">We pursue breakthroughs to serve humanity, matching our ambition with humility.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="card text-center">
+                    <div class="mb-4"><i class="fas fa-lightbulb text-4xl text-primary"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Intelligent Agency</h3>
+                    <p class="text-gray-600">We act with autonomy and responsibility to solve problems and seize opportunities.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="card text-center">
+                    <div class="mb-4"><i class="fas fa-seedling text-4xl text-primary"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Sustainable Impact</h3>
+                    <p class="text-gray-600">We build solutions that are both scientifically sound and economically viable.</p>
+                </div>
+                <!-- Value 4 -->
+                <div class="card text-center">
+                    <div class="mb-4"><i class="fas fa-handshake-angle text-4xl text-primary"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Generous Excellence</h3>
+                    <p class="text-gray-600">We share knowledge freely while demanding the highest standards from ourselves.</p>
+                </div>
+                <!-- Value 5 -->
+                <div class="card text-center">
+                    <div class="mb-4"><i class="fas fa-brain text-4xl text-primary"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Proximity to Genius</h3>
+                    <p class="text-gray-600">We bring together exceptional people to spark breakthrough discoveries.</p>
+                </div>
+                <!-- Value 6 -->
+                <div class="card text-center">
+                    <div class="mb-4"><i class="fas fa-water text-4xl text-primary"></i></div>
+                    <h3 class="text-2xl font-semibold mb-2">Adaptive Resilience</h3>
+                    <p class="text-gray-600">We reframe every setback as a redirection toward a better solution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="section bg-light-gray" id="team">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Who We Are</h2>
+            
+            <!-- Leadership -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Leadership</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Placeholder for a team member -->
+                    <div class="card text-center">
+                        <img src="Images/placeholders/team-member-placeholder.webp" class="w-32 h-32 rounded-full mx-auto mb-4" alt="Team Member">
+                        <h4 class="text-xl font-semibold">Full Name</h4>
+                        <p class="text-primary">Title</p>
+                        <p class="text-gray-600 mt-2">Short bio placeholder. Describe the team member's role and expertise.</p>
+                    </div>
+                    <!-- Add more team member placeholders as needed -->
+                </div>
+            </div>
+
+            <!-- Partners, Supporters, Donors -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Partners</h3>
+                    <p class="text-gray-600">Strategic research partnerships, healthcare collaborators, portfolio companies, and industry partners.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Supporters</h3>
+                    <p class="text-gray-600">Advisory board members, industry mentors, institutional endorsers, and key community voices.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Donors</h3>
+                    <p class="text-gray-600">Founding donors, institutional funders, and individual contributors who fuel our mission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="flex items-center cursor-pointer">
+                        <img src="Images/Logo/full_bioergotech_nobg.webp" alt="bioERGOtech Logo" class="h-10">
+                    </a>
+                    <p class="text-gray-600 mt-2">Making research smarter, not just faster</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-[var(--primary)] transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-[var(--primary)] transition">Terms of Service</a>
+                </div>
+            </div>
+            <hr class="border-gray-200 my-8">
+            <p class="text-gray-500 text-sm text-center">
+                &copy; 2025 bioERGOtech Foundation. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
