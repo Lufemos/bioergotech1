@@ -92,6 +92,10 @@
     </style>
 </head>
 <body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
     <!-- Navigation Bar -->
     <nav class="navbar py-4" id="navbar">
         <div class="container mx-auto px-6 flex justify-between items-center">
@@ -349,5 +353,111 @@
         </div>
     </footer>
 
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Initialize functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            setupScrollListeners();
+            setupNavHighlighting();
+            setupMobileMenu();
+            setupBackToTop();
+        });
+
+        // Setup scroll listeners for scroll-based effects
+        function setupScrollListeners() {
+            const navbar = document.getElementById('navbar');
+            const progressBar = document.getElementById('progressBar');
+
+            window.addEventListener('scroll', () => {
+                // Update navbar style on scroll
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Update progress bar
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (window.scrollY / scrollHeight) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Handle navigation highlighting on scroll
+        function setupNavHighlighting() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (window.pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Mobile menu functionality
+        function setupMobileMenu() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            const closeMenu = document.getElementById('closeMenu');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            closeMenu.addEventListener('click', (e) => {
+                e.preventDefault();
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        }
+
+        // Back to top button functionality
+        function setupBackToTop() {
+            const backToTop = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
 </body>
 </html>
